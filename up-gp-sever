@@ -4,13 +4,13 @@
 
 define(){
 	# versao instalada
-	export VERSION=8.60.0.0.0-WSCMP-SNAPSHOT
+	export VERSION=version
 	# versao do pom (se o amb estiver desatualizado essa versao difere da versao instalada) 
-	export POM_VERSION=8.60.0.0.0-WSCMP-SNAPSHOT
+	export POM_VERSION=version
 	export SERVER_BIN=~/desenv/server/wildfly-8.2.0.Final/bin
 	export DEPLOYMENTS=~/desenv/server/wildfly-8.2.0.Final/ports-$1/deployments
-	export INTEGRATION_LIB=${DEPLOYMENTS}/cpqd-etics-integration-ear-$VERSION.ear/lib
-	export WEBDESKMAPREPORT_LIB=${DEPLOYMENTS}/cpqd-etics-webdeskmapreport-ear-$VERSION.ear/lib
+	export INTEGRATION_LIB=${DEPLOYMENTS}/x-y-w-ear-$VERSION.ear/lib
+	export WEBDESKMAPREPORT_LIB=${DEPLOYMENTS}/x-y-k-ear-$VERSION.ear/lib/lib
 	export BIN_DIR=~/bin
 }
 
@@ -28,10 +28,7 @@ rm -rf *.deployed *.failed *.dodeploy *.isdeploying *.undeployed
 }
 
 create_dodeploy(){
-#touch cpqd-etics-webdeskmapreport-ear-$VERSION.ear.dodeploy
-touch cpqd-etics-integration-ear-$VERSION.ear.dodeploy
-touch cpqd-etics-admweb-ear-8.60.0.0.0-WSCMP-SNAPSHOT.ear.dodeploy
-#touch cpqd-etics-businessconfiguration-ear-$VERSION.ear.dodeploy
+#touch x-y-k-ear-$VERSION.ear/lib.dodeploy
 }
 
 up(){

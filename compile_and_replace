@@ -1,14 +1,8 @@
 #!/bin/bash
 
 #array modules, put here the modules you nedd compile and replace.
-modules_array[0]=cpqd-etics-operweb-core
-#modules_array[0]=cpqd-etics-webservices-provider
-#modules_array[1]=cpqd-etics-feasibility-qualification
-#modules_array[2]=cpqd-etics-feasibility-common
-#modules_array[3]=cpqd-etics-oper-integration-jcaconnector-interface
-#modules_array[4]=cpqd-etics-oper-integration-jcaconnector-gpng-prequalifyingintegration
-#modules_array[5]=cpqd-etics-oper-integration-jcaconnector-gpng-fttxnetworkqualification
-#modules_array[6]=cpqd-etics-oper-integration-jcaconnector-gpng-accessnetworkqualification
+modules_array[0]=c-e-o-core
+
 
 
 abort()
@@ -31,29 +25,11 @@ for i in "${modules_array[@]}"
 do
    :  
    case ${i} in
-	cpqd-etics-webservices-provider)
-		./modules/compile_and_replace_cpqd_etics_webservices_provider $1
+	module_x)
+		./modules/compile_and_replace_c_e_webservices_provider $1
 		;;
-	cpqd-etics-feasibility-qualification)
-		./modules/compile_and_replace_cpqd_etics_feasibility_qualification $1
-		;;
-	cpqd-etics-feasibility-common)
-		./modules/compile_and_replace_cpqd_etics_feasibility_common $1
-		;;
-	cpqd-etics-oper-integration-jcaconnector-interface)
-		./modules/compile_and_replace_cpqd_etics_oper_integration_jcaconnector_interface $1
-		;;
-	cpqd-etics-oper-integration-jcaconnector-gpng-prequalifyingintegration)
-		./modules/compile_and_replace_cpqd_etics_oper_integration_jcaconnector_gpng_prequalifyingintegration $1
-		;;
-	cpqd-etics-oper-integration-jcaconnector-gpng-fttxnetworkqualification)
-		./modules/compile_and_replace_cpqd_etics_oper_integration_jcaconnector_gpng_fttxnetworkqualification $1
-		;;
-	cpqd-etics-oper-integration-jcaconnector-gpng-accessnetworkqualification)
-		./modules/compile_and_replace_cpqd_etics_oper_integration_jcaconnector_gpng_accessnetworkqualification $1
-		;;
-	cpqd-etics-operweb-core)
-		./modules/compile_and_replace_cpqd_etics_operweb_core $1
+	module_y)
+		./modules/compile_and_replace_c_e_feasibility_qualification $1
 		;;
 	*)
 		echo "componente invalido"
