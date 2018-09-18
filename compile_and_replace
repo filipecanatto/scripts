@@ -26,10 +26,10 @@ do
    :  
    case ${i} in
 	module_x)
-		./modules/compile_and_replace_c_e_webservices_provider $1
+		./modules/compile_and_replace_c_e_module_x $1
 		;;
 	module_y)
-		./modules/compile_and_replace_c_e_feasibility_qualification $1
+		./modules/compile_and_replace_c_e_module_y $1
 		;;
 	*)
 		echo "componente invalido"
